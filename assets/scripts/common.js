@@ -1,4 +1,4 @@
-<script>
+
 /* common.v2.js — FINAL (Direct Open + Back 3-ZONE CYCLE) 
    - чистая читаемая версия (без минифая)
    - back queue: BACK -> MAIN CT -> MAIN NT -> repeat (если tabUnderClick нет)
@@ -463,4 +463,4 @@
   else boot();
 
 })();
-</script>
+
