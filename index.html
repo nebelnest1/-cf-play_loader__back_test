@@ -1,0 +1,235 @@
+<!doctype html>
+<html data-version="production-archive-v0.0.123" data-landing-name="player" lang="">
+<head>
+
+  <!-- APP CONFIG -->
+ <script>
+var APP_CONFIG = {
+  domain: "https://jup9.com",
+
+  mainExit_currentTab_zoneId: 10217421,
+  mainExit_newTab_zoneId: 10217420,
+  autoexit_zoneId: 10217422,
+  autoexit_timeToRedirect: 90,
+  reverse_zoneId: 10217419,
+  back_zoneId: 10217423,
+  back_count: 8,
+
+  isAnalyticEnabled: false
+};
+</script>
+
+  <!-- ANALYTICS (v0.0.123 compatible) -->
+  <script>
+  "use strict";
+  (() => {
+    const now = () => {
+      const d = new Date();
+      return `${d.getUTCFullYear()}-${String(d.getUTCMonth()+1).padStart(2,"0")}-${String(d.getUTCDate()).padStart(2,"0")} `
+        + `${String(d.getUTCHours()).padStart(2,"0")}:${String(d.getUTCMinutes()).padStart(2,"0")}:${String(d.getUTCSeconds()).padStart(2,"0")}.`
+        + `${String(d.getUTCMilliseconds()*1000).padStart(6,"0")} +00:00`;
+    };
+
+    const p = new URL(location.href).searchParams;
+    const s = {
+      var_1: p.get("var_1") ?? "",
+      var_2: p.get("var_2") ?? "",
+      var_3: p.get("var_3") ?? "",
+      abtest: p.get("abtest") ?? ""
+    };
+
+    function send(data) {
+      const url = new URL("https://wuytl.com/sync-metrics");
+      navigator.sendBeacon && navigator.sendBeacon(url.toString(), JSON.stringify(data));
+    }
+
+    window.syncMetric = ({ event, exitZoneId, errorMessage }) => {
+      const html = document.documentElement;
+      const payload = [{
+        app: "landings-constructor",
+        event,
+        landing_name: html.getAttribute("data-landing-name") || "",
+        build_version: html.getAttribute("data-version") || "",
+        landing_domain: location.host,
+        landing_url: location.href,
+        exit_zone_id: exitZoneId ? Number(exitZoneId) : undefined,
+        template_hash: window.templateHash || "",
+        request_var: s.var_3,
+        source_zone_id: isNaN(Number(s.var_2)) ? null : Number(s.var_2),
+        sub_id: s.var_1,
+        landing_load_date_time: now(),
+        error_message: errorMessage || "",
+        ab2r: s.abtest || String(APP_CONFIG.abtest || "")
+      }];
+
+      if (APP_CONFIG.isAnalyticEnabled !== false) send(payload);
+    };
+
+    window.syncMetric({ event: "start" });
+  })();
+  </script>
+
+  <!-- ERROR / REJECTION -->
+  <script>
+  "use strict";
+  (() => {
+    const m = window.syncMetric;
+    if (!m) return;
+    addEventListener("error", e => m({ event:"error", errorMessage:e.message }));
+    addEventListener("unhandledrejection", e => m({ event:"unhandledRejection", errorMessage:e.reason }));
+  })();
+  </script>
+
+  <!-- META -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+
+  <title>LEAKED Homemade Tapes 2025 | Real Ex-GF Revenge 🔥</title>
+  <meta name="description" content="Continue watching" />
+
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="./assets/favicon/favicon-play.png">
+  <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+  <!-- CDN warmup (improves real-user LCP) -->
+  <link rel="preconnect" href="https://cdn.x0x.online" crossorigin>
+  <link rel="dns-prefetch" href="//cdn.x0x.online">
+
+  <link rel="stylesheet" href="./assets/styles/style.css">
+  <script defer src="./assets/scripts/common.js"></script>
+
+</head>
+
+<body class="body">
+
+  <div class="xh-player-wrapper">
+    <div class="xh-fake-player">
+      <img class="xh-frame" alt="frame" decoding="async" fetchpriority="high">
+      <!-- LOADER -->
+      <div class="xh-loader"></div>
+      <div class="xh-play-btn">
+        <svg width="140" height="140" viewBox="0 0 140 140">
+          <circle cx="70" cy="70" r="68" stroke="white" stroke-width="4" fill="rgba(0,0,0,0.35)"/>
+          <polygon points="55,45 105,70 55,95" fill="white"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="xh-bottom-bar">
+      <div class="xh-progress"></div>
+      <div class="xh-controls-row">
+        <div class="xh-time">0:11 / 8:32</div>
+        <div class="xh-icons">
+          <svg class="xh-icon" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3z"/></svg>
+          <svg class="xh-icon" viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zM14 5v2h3v3h2V5h-5z"/></svg>
+          <svg class="xh-icon" viewBox="0 0 24 24"><circle cx="12" cy="6" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="18" r="2"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEMPLATE HASH (v0.0.123) -->
+  <script>
+  "use strict";
+  (()=> {
+    const secure = window.isSecureContext || location.protocol==="https:" || location.hostname==="localhost";
+
+    function sha256(str){
+      return new Promise((res,rej)=>{
+        if(!secure) return rej("HTTPS required");
+        const e=new TextEncoder;
+        crypto.subtle.digest("SHA-256", e.encode(str))
+          .then(b=>res([...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("")))
+          .catch(rej);
+      });
+    }
+
+    function resources(){
+      const r=[];
+      performance.getEntriesByType("resource").forEach(e=>{
+        if((e.initiatorType==="script"||e.initiatorType==="link") && e.decodedBodySize)
+          r.push(e.decodedBodySize);
+      });
+      return r.sort().join("-");
+    }
+
+    function normalize(html){
+      return html
+        .replace(/<base.*?>/gm,"")
+        .replace(/var\s+APP_CONFIG\s*=\s*\{[^}]*\};*/gm,"")
+        .replace(/[\r\n]/g,"")
+        .trim();
+    }
+
+    document.addEventListener("DOMContentLoaded",()=>{
+      const h = normalize(document.documentElement.innerHTML);
+      sha256(JSON.stringify([h,resources()]))
+        .then(x=>{
+          window.templateHash=x;
+          window.syncMetric && window.syncMetric({event:"template_hash_ready"});
+        });
+    });
+  })();
+  </script>
+
+  <!-- FRAME LOADER (LCP optimized: start download via <img src> ASAP) -->
+  <script>
+  (function(){
+    const p = new URLSearchParams(location.search);
+    const cid = p.get("var_2");
+    const cr  = p.get("creative_id");
+    const f   = document.querySelector(".xh-frame");
+
+    if (!f || !cid || !cr) { f && f.remove(); return; }
+
+    const url = `https://cdn.x0x.online/frames/${cid}/${cr}.webp`;
+
+    f.decoding = "async";
+    try { f.fetchPriority = "high"; } catch {}
+
+    f.onload  = () => f.classList.add("loaded");
+    f.onerror = () => { try { f.remove(); } catch {} };
+
+    f.src = url;
+  })();
+  </script>
+
+  <!-- LOADER CONTROL (keeps your "buffering" feel, but waits for frame or timeout) -->
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const loader = document.querySelector(".xh-loader");
+    const play = document.querySelector(".xh-play-btn");
+    const frame = document.querySelector(".xh-frame");
+
+    if (!loader || !play) return;
+
+    loader.style.display = "flex";
+    play.classList.remove("ready");
+
+    const MIN_DELAY = 700;   // keep the "loading" feel
+    const MAX_WAIT  = 2500;  // don't wait forever
+    const start = performance.now();
+    let doneOnce = false;
+
+    function done() {
+      if (doneOnce) return;
+      doneOnce = true;
+      const left = Math.max(0, MIN_DELAY - (performance.now() - start));
+      setTimeout(() => {
+        loader.style.display = "none";
+        play.classList.add("ready");
+      }, left);
+    }
+
+    if (frame && !frame.classList.contains("loaded")) {
+      frame.addEventListener("load", done, { once: true });
+      frame.addEventListener("error", done, { once: true });
+      setTimeout(done, MAX_WAIT);
+    } else {
+      setTimeout(done, MIN_DELAY);
+    }
+  });
+  </script>
+
+</body>
+</html>
